@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="479887d6-935a-427d-ac50-4d19f1ea4235" name="Changes" comment="Pokemons pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pokemon/PokemonCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pokemon/PokemonCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SearchBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SortButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SortButton.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +32,9 @@
     &quot;accountId&quot;: &quot;5702d7ef-0647-4245-9021-197279ad1532&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -86,7 +90,7 @@
       <workItem from="1735471050977" duration="1468000" />
       <workItem from="1735481595585" duration="35000" />
       <workItem from="1735654497477" duration="100000" />
-      <workItem from="1735654607339" duration="257000" />
+      <workItem from="1735654607339" duration="383000" />
     </task>
     <task id="LOCAL-00001" summary="Initiate Pokemon app - react native">
       <option name="closed" value="true" />
@@ -104,7 +108,23 @@
       <option name="project" value="LOCAL" />
       <updated>1735654815183</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Pokemons pages">
+      <option name="closed" value="true" />
+      <created>1735654894304</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735654894304</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Pokemons pages">
+      <option name="closed" value="true" />
+      <created>1735654914265</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1735654914265</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,135 +1,134 @@
 import {
-  Dimensions,
-  Modal,
-  Text,
-  Image,
-  StyleSheet,
-  View,
-  Pressable,
+    Dimensions,
+    Modal,
+    Image,
+    StyleSheet,
+    View,
+    Pressable,
 } from "react-native";
-import { Card } from "@/components/Card";
-import { Row } from "@/components/Row";
-import { useThemeColors } from "@/hooks/useThemeColors";
-import { ThemedText } from "./ThemedText";
-import { Radio } from "./Radio";
-import { Shadows } from "@/constants/Shadows";
-import { useRef, useState } from "react";
+import {Card} from "@/components/Card";
+import {Row} from "@/components/Row";
+import {useThemeColors} from "@/hooks/useThemeColors";
+import {ThemedText} from "./ThemedText";
+import {Radio} from "./Radio";
+import {Shadows} from "@/constants/Shadows";
+import {useRef, useState} from "react";
 
 //Filter button -> add more sorting type later
 type Props = {
-  value: "id" | "name"; // | "height"  | "weight" | "base_experience",
-  onChange: (v: "id" | "name") => void;
+    value: "id" | "name"; // | "height"  | "weight" | "base_experience",
+    onChange: (v: "id" | "name") => void;
 };
 
 const options = [
-  { label: "Number", value: "id" },
-  { label: "Name", value: "name" },
+    {label: "Number", value: "id"},
+    {label: "Name", value: "name"},
 ] as const;
 
-export function SortButton({ value, onChange }: Props) {
-  const buttonRef = useRef<View>(null);
-  const colors = useThemeColors();
-  const [isModalVisible, setModalVisibility] = useState(false);
-  const [position, setPosition] = useState<null | {
-    top: number;
-    right: number;
-  }>(null);
-  const onButtonPress = () => {
-    buttonRef.current?.measureInWindow((x, y, width, height) => {
-      setPosition({
-        top: y + height,
-        right: Dimensions.get("window").width - x - width,
-      });
-      setModalVisibility(true);
-    });
-  };
-  const onClose = () => {
-    setModalVisibility(false);
-  };
-  return (
-    <>
-      <Pressable onPress={onButtonPress}>
-        <View
-          ref={buttonRef}
-          style={[styles.button, { backgroundColor: colors.grayWhite }]}
-        >
-          <Image
-            source={
-              value === "id"
-                ? require("@/assets/images/number.png")
-                : require("@/assets/images/alpha.png")
-            }
-            width={16}
-            height={16}
-          />
-        </View>
-      </Pressable>
+export function SortButton({value, onChange}: Props) {
+    const buttonRef = useRef<View>(null);
+    const colors = useThemeColors();
+    const [isModalVisible, setModalVisibility] = useState(false);
+    const [position, setPosition] = useState<null | {
+        top: number;
+        right: number;
+    }>(null);
+    const onButtonPress = () => {
+        buttonRef.current?.measureInWindow((x, y, width, height) => {
+            setPosition({
+                top: y + height,
+                right: Dimensions.get("window").width - x - width,
+            });
+            setModalVisibility(true);
+        });
+    };
+    const onClose = () => {
+        setModalVisibility(false);
+    };
+    return (
+        <>
+            <Pressable onPress={onButtonPress}>
+                <View
+                    ref={buttonRef}
+                    style={[styles.button, {backgroundColor: colors.grayWhite}]}
+                >
+                    <Image
+                        source={
+                            value === "id"
+                                ? require("@/assets/images/number.png")
+                                : require("@/assets/images/alpha.png")
+                        }
+                        width={16}
+                        height={16}
+                    />
+                </View>
+            </Pressable>
 
-      <Modal
-        animationType="fade"
-        transparent
-        visible={isModalVisible}
-        onRequestClose={onClose}
-      >
-        <Pressable style={styles.backdrop} onPress={onClose} />
-        <View
-          style={[styles.popup, { backgroundColor: colors.tint, ...position }]}
-        >
-          <ThemedText
-            style={styles.title}
-            variant="subtitle2"
-            color="grayWhite"
-          >
-            Sort by
-          </ThemedText>
-          <Card>
-            {options.map((o) => (
-              <Pressable onPress={() => onChange(o.value)}>
-                <Row key={o.value} gap={8}>
-                  <Radio checked={o.value === value} />
-                  <ThemedText>{o.label}</ThemedText>
-                </Row>
-              </Pressable>
-            ))}
-          </Card>
-        </View>
-      </Modal>
-    </>
-  );
+            <Modal
+                animationType="fade"
+                transparent
+                visible={isModalVisible}
+                onRequestClose={onClose}
+            >
+                <Pressable style={styles.backdrop} onPress={onClose}/>
+                <View
+                    style={[styles.popup, {backgroundColor: colors.tint, ...position}]}
+                >
+                    <ThemedText
+                        style={styles.title}
+                        variant="subtitle2"
+                        color="grayWhite"
+                    >
+                        Sort by
+                    </ThemedText>
+                    <Card>
+                        {options.map((o) => (
+                            <Pressable onPress={() => onChange(o.value)}>
+                                <Row key={o.value} gap={8}>
+                                    <Radio checked={o.value === value}/>
+                                    <ThemedText>{o.label}</ThemedText>
+                                </Row>
+                            </Pressable>
+                        ))}
+                    </Card>
+                </View>
+            </Modal>
+        </>
+    );
 }
 
 const styles = StyleSheet.create({
-  button: {
-    width: 32,
-    height: 32,
-    borderRadius: 32,
-    flex: 0,
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    button: {
+        width: 32,
+        height: 32,
+        borderRadius: 32,
+        flex: 0,
+        alignItems: "center",
+        justifyContent: "center",
+    },
 
-  backdrop: {
-    flex: 1,
-    backgroundColor: "rgba(0, 0, 0, 0.3)",
-  },
+    backdrop: {
+        flex: 1,
+        backgroundColor: "rgba(0, 0, 0, 0.3)",
+    },
 
-  popup: {
-    position: "absolute",
-    width: 113,
-    padding: 4,
-    paddingTop: 16,
-    gap: 16,
-    borderRadius: 12,
-    ...Shadows.dp2,
-  },
+    popup: {
+        position: "absolute",
+        width: 113,
+        padding: 4,
+        paddingTop: 16,
+        gap: 16,
+        borderRadius: 12,
+        ...Shadows.dp2,
+    },
 
-  title: {
-    paddingLeft: 20,
-  },
+    title: {
+        paddingLeft: 20,
+    },
 
-  card: {
-    paddingVertical: 16,
-    paddingHorizontal: 20,
-    gap: 16,
-  },
+    card: {
+        paddingVertical: 16,
+        paddingHorizontal: 20,
+        gap: 16,
+    },
 });
