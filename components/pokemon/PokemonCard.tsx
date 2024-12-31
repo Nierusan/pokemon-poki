@@ -1,8 +1,10 @@
-import { Image, StyleSheet, type ViewStyle } from "react-native";
+import { Image, StyleSheet, type ViewStyle, Pressable } from "react-native";
 import { Card } from "@/components/Card";
 import { ThemedText } from "@/components/ThemedText";
 import { useThemeColors } from "@/hooks/useThemeColors";
 import { View } from "react-native";
+import { Link } from "expo-router";
+import { opacity } from "react-native-reanimated/lib/typescript/Colors";
 
 type Props = {  
   style?: ViewStyle, 
@@ -13,7 +15,9 @@ type Props = {
 
 export function PokemonCard ({style, id, name}: Props) {
   const colors = useThemeColors();
-  return <Card style={[style, styles.card]}>
+  return <Link href={{pathname:  "/pokemon/[id]", params: {id:id}}} asChild>
+      <Pressable android_ripple={{color: colors.tint, foreground: true}} style={style}>
+        <Card style={[styles.card]}>
     <ThemedText style={styles.id} variant="caption" color="grayMedium">#{id.toString().padStart(3, '0')}</ThemedText>
     <Image 
     source={{uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}} style={{width: 72, height: 72}}
@@ -21,6 +25,8 @@ export function PokemonCard ({style, id, name}: Props) {
     <ThemedText>{name}</ThemedText> 
     <View style={[styles.shadow, {backgroundColor: colors.grayBackground}]}/>
   </Card>
+      </Pressable>
+  </Link>
 }
 
 const styles = StyleSheet.create({
