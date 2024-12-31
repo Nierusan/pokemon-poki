@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="479887d6-935a-427d-ac50-4d19f1ea4235" name="Changes" comment="Initiate Pokemon app - react native">
+    <list default="true" id="479887d6-935a-427d-ac50-4d19f1ea4235" name="Changes" comment="Pokemons pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pokemon/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pokemon/[id].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/pokemon/PokemonCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pokemon/PokemonCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useFetchQuery.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useFetchQuery.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +86,7 @@
       <workItem from="1735471050977" duration="1468000" />
       <workItem from="1735481595585" duration="35000" />
       <workItem from="1735654497477" duration="100000" />
-      <workItem from="1735654607339" duration="175000" />
+      <workItem from="1735654607339" duration="257000" />
     </task>
     <task id="LOCAL-00001" summary="Initiate Pokemon app - react native">
       <option name="closed" value="true" />
@@ -100,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735039908550</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Pokemons pages">
+      <option name="closed" value="true" />
+      <created>1735654815183</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735654815183</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +112,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initiate Pokemon app - react native" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initiate Pokemon app - react native" />
+    <MESSAGE value="Pokemons pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pokemons pages" />
   </component>
 </project>
