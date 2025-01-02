@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="479887d6-935a-427d-ac50-4d19f1ea4235" name="Changes" comment="Animation and interaction">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pokemon/PokemonSpec.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pokemon/PokemonStat.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/pokemon/PokemonType.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eas.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pokemon/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pokemon/[id].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/RootView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/RootView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SortButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SortButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pokemon/PokemonCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pokemon/PokemonCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/pokemon.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/pokemon.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useFetchQuery.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useFetchQuery.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -73,7 +65,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "editor.breadcrumbs",
     "ts.external.directory.path": "/Users/aomori/WebstormProjects/pokedex-poki/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -108,7 +100,7 @@
       <workItem from="1735471050977" duration="1468000" />
       <workItem from="1735481595585" duration="35000" />
       <workItem from="1735654497477" duration="100000" />
-      <workItem from="1735654607339" duration="51151000" />
+      <workItem from="1735654607339" duration="54769000" />
     </task>
     <task id="LOCAL-00001" summary="Initiate Pokemon app - react native">
       <option name="closed" value="true" />
@@ -150,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735655052271</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Animation and interaction">
+      <option name="closed" value="true" />
+      <created>1735817066751</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1735817066751</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,13 +167,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/pokemon/[id].tsx</url>
-          <line>66</line>
+          <line>69</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/pokemon/[id].tsx</url>
-          <line>35</line>
+          <line>38</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
